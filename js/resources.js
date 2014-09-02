@@ -32,7 +32,12 @@ game.resources = [
 		type: "image",	
 		src:  "data/img/sprites/mole.png"
 	},
-
+  // moody
+  {
+    name: "moody",
+    type: "image",
+    src:  "data/img/sprites/moody.png"
+  },
 	// a basic ASCII font
 	{
 		name: "atascii",
