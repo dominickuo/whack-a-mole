@@ -62,15 +62,16 @@ var game = {
 	 * callback when everything is loaded
 	 */
 	loaded: function () {
-		
+		// set the "Welcome" Screen Object
+		me.state.set(me.state.MENU, new game.TitleScreen());
 		// set the "Play/Ingame" Screen Object
 		me.state.set(me.state.PLAY, new game.PlayScreen());
       
 		// set a fade transition effect
 		me.state.transition("fade","#000000", 250);
 		
-		// start the game
-		me.state.change(me.state.PLAY);
+		// go to the title screen
+		me.state.change(me.state.MENU);
 	}
 
 }; // game
