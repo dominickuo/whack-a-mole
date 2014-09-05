@@ -13,6 +13,7 @@ game.TitleScreen = me.ScreenObject.extend({
 	  me.input.registerPointerEvent('pointerdown', this.rect, this.onMouseDown.bind(this));
 	  
 	  this.display();
+	  this.showBanner();
 	},
 	
 	onMouseDown: function() {
@@ -24,6 +25,19 @@ game.TitleScreen = me.ScreenObject.extend({
     var x = me.video.renderer.getWidth()/2;
     var y = me.video.renderer.getHeight()/2;
     me.game.world.addChild(new game.TitleScreen.ShowText("WHACK A MOODY", "left", x, y));
+    me.game.world.addChild(new game.TitleScreen.ShowText("TAP TO PLAY", "left", x, y + 48));
+    me.game.world.addChild(new game.TitleScreen.ShowText("SEPTEMBER 6TH 2014", "center", x, y + 256));
+  },
+
+  showBanner: function() {
+    var spritewidth = spriteheight = 180;
+    var x = me.video.renderer.getWidth()/5;
+    var y = (me.video.renderer.getHeight() - spriteheight)/2;
+    var image = me.loader.getImage("friends");
+
+    var banner = new me.Sprite(x, y, image, spritewidth, spriteheight);
+    banner.resize(2, 2);
+    me.game.world.addChild(banner, 0, 0);
   },
 
 	/**	

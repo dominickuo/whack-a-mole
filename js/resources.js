@@ -38,6 +38,12 @@ game.resources = [
     type: "image",
     src:  "data/img/sprites/moody.png"
   },
+  // friends
+  {
+    name: "friends",
+    type: "image",
+    src:  "data/img/sprites/friends.png"
+  },
 	// a basic ASCII font
 	{
 		name: "atascii",
