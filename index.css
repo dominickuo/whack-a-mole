@@ -31,3 +31,11 @@ body {
 	image-rendering: optimize-contrast;
 	-ms-interpolation-mode: nearest-neighbor;
 }
+
+.corgi {
+	position: absolute;
+	top: 15%;
+	left: 30%;
+	width: 40%;
+	height: auto;
+}

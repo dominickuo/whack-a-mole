@@ -18,15 +18,14 @@ game.TitleScreen = me.ScreenObject.extend({
 	
 	onMouseDown: function() {
 	  me.input.releasePointerEvent('pointerdown', this.rect);
-	  me.state.change(me.state.PLAY);
+	  me.state.change(me.state.READY);
 	},
 
   display: function() {
     var x = me.video.renderer.getWidth()/2;
     var y = me.video.renderer.getHeight()/2;
-    me.game.world.addChild(new game.TitleScreen.ShowText("WHACK A MOODY", "left", x, y));
-    me.game.world.addChild(new game.TitleScreen.ShowText("TAP TO PLAY", "left", x, y + 48));
-    me.game.world.addChild(new game.TitleScreen.ShowText("SEPTEMBER 6TH 2014", "center", x, y + 256));
+    me.game.world.addChild(new game.Utilities.ShowText("WHACK A MOODY", "left", x, y));
+    me.game.world.addChild(new game.Utilities.ShowText("TAP TO PLAY", "left", x, y + 48));
   },
 
   showBanner: function() {
@@ -46,34 +45,4 @@ game.TitleScreen = me.ScreenObject.extend({
 	onDestroyEvent: function() {
 	  
 	}
-});
-
-game.TitleScreen.ShowText = me.Renderable.extend( {  
-  /** 
-   * constructor
-   */
-  init: function(text, align, x, y) {
-    
-    // call the super constructor 
-    // (size does not matter here)
-    this._super(me.Renderable, 'init', [x, y, 10, 10]); 
-    
-    // create a font
-    this.font = new me.BitmapFont("atascii", {x:24});
-    this.font.alignText = "bottom";
-    this.font.set(align, 1.2);
-
-    this.text = text;
-
-    // make sure we use screen coordinates
-    this.floating = true;
-  },
-
-  /**
-   * draw the score
-   */
-  draw : function (context) {
-    this.font.draw (context, this.text, this.pos.x, this.pos.y);
-  }
-
 });

@@ -64,9 +64,12 @@ var game = {
 	loaded: function () {
 		// set the "Welcome" Screen Object
 		me.state.set(me.state.MENU, new game.TitleScreen());
+		// set the "Ready" Screen Object
+    me.state.set(me.state.READY, new game.ReadyScreen());
 		// set the "Play/Ingame" Screen Object
 		me.state.set(me.state.PLAY, new game.PlayScreen());
-      
+    // set the "End" Screen Object
+    me.state.set(me.state.GAME_END, new game.EndScreen());
 		// set a fade transition effect
 		me.state.transition("fade","#000000", 250);
 		

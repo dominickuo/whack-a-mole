@@ -8,6 +8,7 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
     </head>
     <body>
+        <img id="corgi" src="data/img/sprites/corgi.gif" class="corgi" hidden>
         <!-- Canvas placeholder -->
 		<div id="screen"></div>
 		
@@ -20,10 +21,13 @@
 		<!-- Game Scripts -->
 		<script type="text/javascript" src="js/game.js"></script>
 		<script type="text/javascript" src="js/resources.js"></script>
+		<script type="text/javascript" src="js/utilities.js"></script>
 		<script type="text/javascript" src="js/entities/entities.js"></script>
 		<script type="text/javascript" src="js/entities/HUD.js"></script>
 		<script type="text/javascript" src="js/screens/title.js"></script>
+		<script type="text/javascript" src="js/screens/ready.js"></script>
 		<script type="text/javascript" src="js/screens/play.js"></script>
+		<script type="text/javascript" src="js/screens/end.js"></script>
 		<script type="text/javascript">
 			/* Bootstrap */
 			window.onReady(function onReady() {

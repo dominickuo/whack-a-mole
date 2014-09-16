@@ -60,6 +60,11 @@ game.MoleEntity = me.AnimationSheet.extend(
                 me.save.hiscore = game.data.hiscore;
             }
 
+            if (game.data.score >= 1000) {
+              me.state.change(me.state.GAME_END);
+              document.getElementById('corgi').hidden = false;
+            }
+
             // stop propagating the event
             return false;
             
