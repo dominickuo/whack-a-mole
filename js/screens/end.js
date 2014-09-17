@@ -20,7 +20,7 @@ game.EndScreen = me.ScreenObject.extend({
 
   display: function() {
     var x = me.video.renderer.getWidth()/2;
-    var y = me.video.renderer.getHeight()/6;
+    var y = me.video.renderer.getHeight()/6.4;
     me.game.world.addChild(new game.Utilities.ShowText("- HAPPY BIRTHDAY CAROL -", "center", x, y));
     me.game.world.addChild(new game.Utilities.ShowText("SEPTEMBER 6TH 2014", "center", x, y + 512));
   },

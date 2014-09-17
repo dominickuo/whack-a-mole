@@ -34,8 +34,14 @@ body {
 
 .corgi {
 	position: absolute;
-	top: 15%;
-	left: 30%;
-	width: 40%;
+	top: 23%;
+	left: 33%;
+	width: 34%;
 	height: auto;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 1000ms;
+	-webkit-transition-timing-function: ease-in-out;
+	transition-property: opacity;
+	transition-duration: 1000ms;
+	transition-timing-function: ease-in-out;
 }

@@ -4,7 +4,9 @@ game.TitleScreen = me.ScreenObject.extend({
 	 */
 	onResetEvent: function() {
 	  // Hide the corgi
-    document.getElementById('corgi').hidden = true;
+    var corgi = document.getElementById('corgi');
+    corgi.hidden = true;
+    corgi.style.opacity = 0;
 	  // The rect of the screen region.
 	  var screenWidth = me.video.renderer.getWidth();
 	  var screenHeight = me.video.renderer.getHeight();
