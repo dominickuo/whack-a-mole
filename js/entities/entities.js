@@ -63,6 +63,7 @@ game.MoleEntity = me.AnimationSheet.extend(
             if (game.data.score >= 1000) {
               me.state.change(me.state.GAME_END);
               document.getElementById('corgi').hidden = false;
+              game.data.score = game.data.hiscore = 0;
             }
 
             // stop propagating the event

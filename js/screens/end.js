@@ -15,7 +15,7 @@ game.EndScreen = me.ScreenObject.extend({
   
   onMouseDown: function() {
     me.input.releasePointerEvent('pointerdown', this.rect);
-    me.state.change(me.state.READY);
+    me.state.change(me.state.MENU);
   },
 
   display: function() {

@@ -3,8 +3,8 @@ game.TitleScreen = me.ScreenObject.extend({
 	 *  action to perform on state change
 	 */
 	onResetEvent: function() {
-	  me.game.reset();
-
+	  // Hide the corgi
+    document.getElementById('corgi').hidden = true;
 	  // The rect of the screen region.
 	  var screenWidth = me.video.renderer.getWidth();
 	  var screenHeight = me.video.renderer.getHeight();

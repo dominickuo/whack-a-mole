@@ -44,6 +44,12 @@ game.resources = [
     type: "image",
     src:  "data/img/sprites/friends.png"
   },
+  // hammer
+  {
+    name: "hammer",
+    type: "image",
+    src:  "data/img/sprites/hammer.png"
+  },
 	// a basic ASCII font
 	{
 		name: "atascii",
